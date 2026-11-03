@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="How to install the Nest family messenger beta on iPhone or Android.">
+<meta name="robots" content="noindex">
+<title>Install Nest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root {
+  --navy: #25328F; --blue: #3647C4; --sun: #FFD34E; --bg: #F6F7FB; --surface: #FFFFFF; --ink: #171A3A;
+  --muted: #565C78; --line: #E1E4F0; --soft: #ECEEFB; --warm: #FFF3EA; --warm-ink: #8A3A0C;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0E1124; --surface: #171B33; --ink: #E9EBF7; --muted: #A3A9C6; --line: #2A3052; --soft: #232A55; --warm: #3A2414; --warm-ink: #FFC9A3; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0E1124; --surface: #171B33; --ink: #E9EBF7; --muted: #A3A9C6; --line: #2A3052; --soft: #232A55; --warm: #3A2414; --warm-ink: #FFC9A3; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--font); }
+header { background: var(--navy); color: #fff; padding: 28px 16px 26px; text-align: center; }
+header h1 { margin: 8px 0 6px; font-size: 30px; line-height: 1.15; letter-spacing: -0.5px; }
+header p { margin: 0 auto; max-width: 520px; color: #D5DAFF; }
+.logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 20px; }
+main { max-width: 640px; margin: 0 auto; padding: 18px 16px 48px; }
+.pick { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 22px; }
+.pick a { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 18px 10px; border-radius: 18px; background: var(--surface); border: 2px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 18px; min-height: 44px; }
+.pick a:hover, .pick a:focus-visible { border-color: var(--blue); outline: none; }
+.pick small { font-weight: 500; color: var(--muted); font-size: 14px; }
+section { background: var(--surface); border-radius: 22px; padding: 20px 18px; margin-bottom: 18px; border: 1px solid var(--line); }
+h2 { margin: 0 0 4px; font-size: 22px; }
+.lead { color: var(--muted); margin: 0 0 14px; }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; }
+ol.steps > li { counter-increment: s; position: relative; padding: 0 0 16px 48px; }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 17px; background: var(--blue); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+ol.steps > li strong { display: block; }
+.btn { display: inline-block; margin-top: 8px; background: var(--blue); color: #fff; text-decoration: none; font-weight: 700; padding: 13px 20px; border-radius: 14px; min-height: 44px; }
+.note { background: var(--warm); color: var(--warm-ink); border-radius: 14px; padding: 12px 14px; font-size: 15px; margin-top: 6px; }
+.say { display: inline-block; background: var(--soft); border-radius: 8px; padding: 1px 8px; font-weight: 600; }
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 40px; max-width: 560px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <svg width="34" height="34" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 27 L32 9 L56 27" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 30 h30 a5 5 0 0 1 5 5 v13 a5 5 0 0 1 -5 5 h-15 l-8 6 v-6 h-7 a5 5 0 0 1 -5 -5 v-13 a5 5 0 0 1 5 -5 z" fill="#fff"/></svg>
+    Nest
+  </div>
+  <h1>Try Nest with your family</h1>
+  <p>The family messenger where your child's account sits under yours. Free, no ads. Thank you for testing it with us.</p>
+</header>
+
+<main>
+  <div class="note" style="margin:0 0 18px;font-size:16px"><strong>This invitation is for your family only.</strong> Nest is in private beta testing, so please don't share this link or these instructions. If you'd like to invite anyone outside your family, including another family, ask us first.</div>
+
+  <p style="margin:0 0 10px;font-weight:600">Which phone are you installing it on?</p>
+  <div class="pick">
+    <a href="#iphone">iPhone<small>Takes about 3 minutes</small></a>
+    <a href="#android">Android<small>Takes about 3 minutes</small></a>
+  </div>
+
+  <section id="iphone">
+    <h2>iPhone</h2>
+    <p class="lead">Nest is still in testing, so on iPhone it comes through Apple's free testing app, TestFlight.</p>
+    <ol class="steps">
+      <li><strong>Install TestFlight</strong>Tap the button, then tap <span class="say">Get</span> in the App Store.<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">Get TestFlight</a></li>
+      <li id="tf-link-step"><strong>Open the Nest invitation</strong>Come back to this page and tap the button. TestFlight opens.<br><a class="btn" id="tf-link" href="#">Open the Nest invitation</a></li>
+      <li id="tf-email-step" hidden><strong>Send us your Apple email</strong>Reply to the WhatsApp message with the email address you use for Apple (your Apple ID). Within a day you'll get an email from TestFlight called "Nest". Open it on your iPhone and tap <span class="say">View in TestFlight</span>.</li>
+      <li><strong>Install Nest</strong>In TestFlight, tap <span class="say">Accept</span>, then <span class="say">Install</span>. Nest appears on your home screen.</li>
+      <li><strong>Allow notifications</strong>When you first open Nest, tap <span class="say">Allow</span>, so you know when a message or a call comes in.</li>
+    </ol>
+    <p class="note">Updates arrive by themselves. If TestFlight ever says a new version is ready, open TestFlight and tap <span class="say">Update</span>.</p>
+  </section>
+
+  <section id="android">
+    <h2>Android</h2>
+    <p class="lead">Nest isn't in the Play Store yet, so you install it straight from our download link. Your phone will ask you to allow this once.</p>
+    <ol class="steps">
+      <li><strong>Download Nest</strong>Tap the button. If your phone asks, tap <span class="say">Download</span> (the file is about 100 MB, so Wi-Fi is best).<br><a class="btn" id="apk-link" href="https://expo.dev/artifacts/eas/9PVWo3ob9-C-dMe2_8_Bz9ucRsehw4Rf2Nx3dHIhWTE.apk">Download Nest for Android</a></li>
+      <li><strong>Open the file</strong>When the download finishes, tap <span class="say">Open</span> in the message at the bottom of the screen, or open your notifications and tap the Nest download.</li>
+      <li><strong>Allow the install, once</strong>If your phone says it can't install apps from this source, tap <span class="say">Settings</span>, switch on <span class="say">Allow from this source</span>, then tap the back arrow.</li>
+      <li><strong>Install</strong>Tap <span class="say">Install</span>. If Google Play Protect warns that the app is unknown, tap <span class="say">More details</span>, then <span class="say">Install anyway</span>. (It warns because Nest isn't in the Play Store yet.)</li>
+      <li><strong>Open Nest and allow notifications</strong>Tap <span class="say">Open</span>, then <span class="say">Allow</span> when Nest asks to send notifications.</li>
+    </ol>
+    <p class="note">Updates arrive by themselves: when you close and reopen Nest, it picks up the newest version.</p>
+  </section>
+
+  <section id="setup">
+    <h2>Setting up your family</h2>
+    <p class="lead">One parent does this first, on their own phone.</p>
+    <ol class="steps">
+      <li><strong>Parent: create your family</strong>Open Nest and tap <span class="say">I'm a parent</span>. Sign up with your email and a password, read the consent box (it includes the family-only beta rule above) and tick <span class="say">I agree</span>, then tap <span class="say">Create family</span>.</li>
+      <li><strong>Add your children</strong>Go to <span class="say">Settings</span>, type your child's first name and age, and tap <span class="say">Add and get a link code</span>. You get a 6-digit code.</li>
+      <li><strong>Link your child's phone</strong>Install Nest on your child's phone the same way. Open it, tap <span class="say">I have a family code</span> and type the 6-digit code. Your child reads a short note about what you can see and taps <span class="say">I understand</span>.</li>
+      <li><strong>Add the other parent</strong>In <span class="say">Settings</span>, add them as a parent to get a code. They sign up on their phone and tap <span class="say">Join your partner's family</span>.</li>
+      <li><strong>Connect with us</strong>To let our children chat, swap friend codes with us (shown on each child's home screen). Both families' parents say yes before the children can chat. Please ask us before connecting with any other family.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Good to know</h2>
+    <ul style="margin:0;padding-left:20px">
+      <li>Nest is in early testing, so things may change and the odd thing may not work. Please tell us what's confusing or broken: a screenshot helps a lot.</li>
+      <li>Your messages are stored on Nest's servers in Europe and aren't yet end-to-end encrypted.</li>
+      <li>Children can report anything that worries them to you or, privately, to Nest's safety team.</li>
+      <li>You can delete your family and everything in it at any time, in <span class="say">Settings</span>.</li>
+    </ul>
+  </section>
+</main>
+<footer>Nest is a family messenger from Sable Invest (Pty) Ltd, in private testing with invited families.</footer>
+
+<script>
+// TestFlight public invitation link. Leave empty until Apple approves the beta: the page then asks iPhone users
+// for their Apple email instead.
+var TESTFLIGHT_URL = '';
+(function () {
+  try {
+    if (TESTFLIGHT_URL) {
+      document.getElementById('tf-link').href = TESTFLIGHT_URL;
+    } else {
+      document.getElementById('tf-link-step').hidden = true;
+      document.getElementById('tf-email-step').hidden = false;
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
