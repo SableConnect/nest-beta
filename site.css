@@ -180,3 +180,40 @@ footer .wrap { padding-top: 26px; padding-bottom: 40px; color: var(--muted); fon
   .band { padding: 52px 0; }
 }
 @media (max-width: 480px) { .two { grid-template-columns: minmax(0, 1fr); } form { padding: 20px; } .hero .ctas .btn { width: 100%; } }
+
+/* how Nest is different */
+:root { --blue-text: #3647C4; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --blue-text: #A9B3FF; } }
+:root[data-theme="dark"] { --blue-text: #A9B3FF; }
+.compare-band { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.from { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+.from-card { background: var(--page); border: 1px solid var(--line); border-radius: 24px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.from-card .tag { justify-self: start; font-weight: 700; font-size: 13px; padding: 4px 11px; border-radius: 999px; background: var(--blue-soft); color: var(--blue-text); }
+.from-card h3 { font-size: 22px; }
+.from-card p { color: var(--muted); font-size: 16px; }
+.cmp-wrap { margin-top: 24px; overflow-x: auto; border: 1px solid var(--line); border-radius: 24px; background: var(--card); }
+.cmp-wrap:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.cmp { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.45; }
+.cmp caption { text-align: left; font-family: var(--display); font-weight: 800; font-size: 20px; padding: 18px 20px 6px; }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: 12px 16px; border-top: 1px solid var(--line); }
+.cmp thead th { border-top: 0; font-size: 14px; color: var(--muted); font-weight: 700; }
+.cmp tbody th { font-weight: 700; width: 22%; }
+.cmp td { color: var(--muted); width: 26%; }
+.cmp .us { background: var(--blue-soft); color: var(--ink); font-weight: 600; }
+.cmp thead .us { color: var(--blue-text); font-size: 16px; }
+.cmp-note { margin-top: 14px; color: var(--muted); font-size: 15px; max-width: 52em; }
+.cmp-note a { color: var(--blue-text); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 860px) { .from { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .cmp-wrap { border: 0; background: none; overflow: visible; }
+  .cmp, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: auto; }
+  .cmp caption { display: block; padding: 0 0 8px; }
+  .cmp thead { display: none; }
+  .cmp tr { background: var(--card); border: 1px solid var(--line); border-radius: 20px; margin-bottom: 12px; overflow: hidden; }
+  .cmp tbody th { border-top: 0; padding: 14px 16px 8px; font-size: 16px; width: auto; }
+  .cmp td { width: auto; }
+  .cmp td { padding: 8px 16px 10px; display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 10px; }
+  .cmp td::before { content: attr(data-label); font-weight: 700; color: var(--ink); }
+  .cmp td.us::before { color: var(--blue-text); }
+}
