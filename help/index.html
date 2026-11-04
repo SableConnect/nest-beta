@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Step-by-step help installing Nest on your phone or your child's phone, including phones with Screen Time or Family Link.">
+<meta name="robots" content="noindex">
+<title>Install help</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+:root { --blue: #3647C4; --bg: #F6F7FB; --surface: #FFFFFF; --ink: #171A3A; --muted: #565C78; --line: #E1E4F0; --soft: #ECEEFB; --warm: #FFF3EA; --warm-ink: #8A3A0C; --good: #16794A; --good-bg: #DDF3E7; --link: #3647C4; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0E1124; --surface: #171B33; --ink: #E9EBF7; --muted: #A3A9C6; --line: #2A3052; --soft: #232A55; --warm: #3A2414; --warm-ink: #FFC9A3; --good: #63C98F; --good-bg: #173A2A; --link: #A9B3FF; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0E1124; --surface: #171B33; --ink: #E9EBF7; --muted: #A3A9C6; --line: #2A3052; --soft: #232A55; --warm: #3A2414; --warm-ink: #FFC9A3; --good: #63C98F; --good-bg: #173A2A; --link: #A9B3FF; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--font); }
+header { background: #FFD34E; color: #171A3A; padding: 22px 16px 20px; }
+header .wrap, main { max-width: 640px; margin: 0 auto; }
+header a { color: #171A3A; text-decoration: none; font-weight: 800; }
+header h1 { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.15; margin: 10px 0 4px; letter-spacing: -0.02em; }
+header p { margin: 0; color: #3A3D5C; }
+main { padding: 18px 16px 48px; }
+.crumbs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.crumbs button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 20px 18px; }
+h2 { font-family: var(--display); font-weight: 800; font-size: 23px; margin: 0 0 6px; line-height: 1.2; }
+.lead { color: var(--muted); margin: 0 0 14px; }
+.choices { display: grid; gap: 10px; }
+.choices button { font: inherit; font-weight: 700; text-align: left; display: flex; align-items: center; gap: 12px; width: 100%; padding: 15px 16px; min-height: 56px; border-radius: 18px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.choices button:hover, .choices button:focus-visible { border-color: var(--blue); outline: none; }
+.choices small { display: block; font-weight: 500; color: var(--muted); font-size: 14px; }
+.choices .ico { width: 36px; height: 36px; flex: none; border-radius: 12px; background: var(--soft); display: grid; place-items: center; font-size: 19px; }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0 0 4px; }
+ol.steps > li { counter-increment: s; position: relative; padding: 0 0 14px 46px; }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 16px; background: var(--blue); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+ol.steps > li b { display: block; }
+.say { display: inline-block; background: var(--soft); border-radius: 8px; padding: 0 7px; font-weight: 600; }
+.note { background: var(--warm); color: var(--warm-ink); border-radius: 14px; padding: 12px 14px; font-size: 15px; margin: 6px 0 14px; }
+.ok { background: var(--good-bg); color: var(--good); border-radius: 14px; padding: 12px 14px; font-size: 15px; margin: 6px 0 14px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; background: var(--blue); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 18px; border-radius: 16px; min-height: 48px; border: 0; font: inherit; font-weight: 700; cursor: pointer; }
+.q { font-weight: 700; margin: 16px 0 8px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+.row button { font: inherit; font-weight: 700; padding: 11px 16px; border-radius: 14px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; min-height: 48px; }
+.row button.yes { border-color: var(--link); color: var(--link); }
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 40px; }
+a { color: var(--blue); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="../">Nest</a>
+  <h1>Install help</h1>
+  <p>Answer two questions and follow the steps for your phone. About 3 minutes.</p>
+</div></header>
+<main>
+  <div class="crumbs" id="crumbs"></div>
+  <div class="card" id="view" aria-live="polite"></div>
+  <p style="color:var(--muted);font-size:15px;margin-top:16px">Still stuck? Email <a href="mailto:hello@sableconnect.app?subject=Help%20installing%20Nest">hello@sableconnect.app</a> or reply to your invite email with a screenshot of what you see, and say which phone it is. We'll help you through it.</p>
+</main>
+<footer>Nest is a family messenger from Sable Invest (Pty) Ltd, in private testing. <a href="../privacy/">Privacy notice</a></footer>
+
+<script>
+(function () {
+  // Each screen: a question with choices, or steps with an optional "did it work?" and what to try next.
+  // Keep each to a few short steps: parents give this about 3 minutes.
+  var S = {
+    start: { q: 'Which phone are you installing Nest on?', choices: [
+      ['mine', '🙋', 'My own phone', 'Parents install Nest first'],
+      ['child', '🧒', "My child's phone", 'Including phones with Screen Time or Family Link'],
+      ['blocked', '⛔', 'Nest is installed but blocked or quiet', 'It stops at bedtime, or messages arrive late'] ] },
+    mine: { q: 'What kind of phone is it?', choices: [['mine-iphone', '', 'iPhone'], ['mine-android', '', 'Android']] },
+    child: { q: "What kind of phone is your child's?", choices: [['child-iphone', '', 'iPhone'], ['child-android', '', 'Android']] },
+
+    'mine-iphone': { title: 'Your iPhone', steps: [
+      ['Get TestFlight', 'Install Apple\'s free TestFlight app from the App Store. <a href="https://apps.apple.com/app/testflight/id899247664">Open TestFlight in the App Store</a>.'],
+      ['Open the Nest invitation', 'Open the email from TestFlight called "Nest" on this iPhone and tap <span class="say">View in TestFlight</span>. No email yet? Reply to your Nest invite with the Apple email on this iPhone (Settings, then the name at the top).'],
+      ['Install', 'In TestFlight tap <span class="say">Accept</span>, then <span class="say">Install</span>.'],
+      ['Allow notifications', 'Open Nest and tap <span class="say">Allow</span> when it asks.'] ],
+      check: 'Is Nest on your home screen?', next: [['TestFlight says the invitation is invalid or used', 'tf-invalid'], ['I can\'t find the TestFlight email', 'tf-noemail']] },
+    'tf-invalid': { title: 'The invitation is invalid or already used', steps: [
+      ['Check the Apple email', 'An invitation works for the Apple email it was sent to. Open Settings, tap the name at the top and check the email there.'],
+      ['Ask for a new one', 'Reply to your Nest invite with that exact email and we\'ll send a fresh invitation, usually the same day.'] ] },
+    'tf-noemail': { title: 'No TestFlight email', steps: [
+      ['Look in Junk or Spam', 'It comes from TestFlight (no_reply@email.apple.com) with the subject "Nest".'],
+      ['Check which email we have', 'It goes to the Apple email you sent us. Reply to your Nest invite if it was a different one.'],
+      ['Give it a day', 'We send TestFlight invitations by hand, usually within a day of your reply.'] ] },
+
+    'mine-android': { title: 'Your Android phone', steps: [
+      ['Download Nest', 'Open <a href="../get/#android">the install page</a> on this phone and tap <span class="say">Download Nest for Android</span>. Use Wi-Fi: it\'s about 100 MB.'],
+      ['Open the file', 'Tap <span class="say">Open</span> when the download finishes (or find it in the Files app, under Downloads).'],
+      ['Allow it once', 'If the phone says it can\'t install from this source, tap <span class="say">Settings</span>, switch on <span class="say">Allow from this source</span>, and go back.'],
+      ['Install', 'Tap <span class="say">Install</span>. If Play Protect warns that the app is unknown, tap <span class="say">More details</span>, then <span class="say">Install anyway</span>. It warns because Nest isn\'t in the Play Store yet.'] ],
+      check: 'Is Nest installed?', next: [['It says "App not installed" or it\'s blocked', 'android-blocked']] },
+    'android-blocked': { title: 'Android won\'t install it', steps: [
+      ['Samsung phones: Auto Blocker', 'Open Settings, then <span class="say">Security and privacy</span>, then <span class="say">Auto Blocker</span>, and switch it off while you install. Switch it back on afterwards.'],
+      ['An older Nest is already there', 'Hold the old Nest icon, tap <span class="say">Uninstall</span>, then install again.'],
+      ['Not enough space', 'Nest needs about 300 MB free. Delete a few big videos or apps and try again.'],
+      ['Still blocked?', 'Email us a screenshot of the message. Nest will soon be in Google Play testing, which avoids this.'] ] },
+
+    'child-iphone': { title: "Your child's iPhone", steps: [
+      ['Send us the right Apple email', 'On your child\'s iPhone open Settings and tap the name at the top. Reply to your Nest invite with that email, so the TestFlight invitation goes to the right Apple account.'],
+      ['Allow app installs for a moment', 'On <b>your</b> iPhone open Settings, then <span class="say">Family</span> (or <span class="say">Screen Time</span>), then your child\'s name. Make sure installing apps is allowed. If Ask to Buy is on, keep your phone close: you\'ll get a request to approve TestFlight.'],
+      ['Install TestFlight on their iPhone', 'On your child\'s iPhone, get TestFlight from the App Store and approve the request on your phone.'],
+      ['Open the invitation and install', 'Open the TestFlight email on your child\'s iPhone, tap <span class="say">View in TestFlight</span>, then <span class="say">Accept</span> and <span class="say">Install</span>.'],
+      ['Link it to your family', 'Open Nest on their iPhone, tap <span class="say">I have a family code</span> and type the 6-digit code from your Nest Settings.'] ],
+      check: 'Is Nest working on your child\'s iPhone?', next: [['It says the app is restricted or can\'t be installed', 'iphone-restricted'], ['Nest stops working at bedtime or after a while', 'blocked']] },
+    'iphone-restricted': { title: 'The iPhone says it\'s restricted', steps: [
+      ['Age rating limit', 'On your iPhone, open your child\'s Screen Time settings, then <span class="say">Content &amp; Privacy Restrictions</span>, then the App Store settings. If apps are limited by age rating, raise it for a moment, install, then set it back.'],
+      ['Installing apps switched off', 'In the same place, set <span class="say">Installing Apps</span> to <span class="say">Allow</span> while you install. Switch it back afterwards if you like: Nest keeps working.'],
+      ['Ask to Buy request missing', 'Make sure your phone is signed in to the same Family Sharing group, then ask your child to tap Get again.'] ] },
+
+    'child-android': { title: "Your child's Android phone", steps: [
+      ['Download on their phone', 'On your child\'s phone, open <a href="../get/#android">the install page</a> and tap <span class="say">Download Nest for Android</span>.'],
+      ['Allow it once', 'If it says it can\'t install from this source, tap <span class="say">Settings</span> and switch on <span class="say">Allow from this source</span>. On a Samsung, Auto Blocker may need to be off for a moment (Settings, Security and privacy, Auto Blocker).'],
+      ['Install', 'Tap <span class="say">Install</span>, and <span class="say">Install anyway</span> if Play Protect warns.'],
+      ['Link it to your family', 'Open Nest, tap <span class="say">I have a family code</span> and type the 6-digit code from your Nest Settings.'] ],
+      check: 'Is Nest working on your child\'s phone?', next: [['The phone has Google Family Link and won\'t allow it', 'familylink'], ['It says "App not installed" or it\'s blocked', 'android-blocked'], ['Nest stops working at bedtime or after a while', 'blocked']] },
+    'familylink': { title: 'Phones with Google Family Link', steps: [
+      ['Allow installs from the browser', 'On your child\'s phone open Settings, then <span class="say">Apps</span>, then <span class="say">Special app access</span>, then <span class="say">Install unknown apps</span>. Tap <span class="say">Chrome</span> and switch on <span class="say">Allow from this source</span>. If Family Link asks, enter your parent password.'],
+      ['Install, then switch it off again', 'Install Nest, then switch <span class="say">Allow from this source</span> back off so your child can\'t install other apps this way.'],
+      ['If Family Link won\'t let you', 'Some Family Link settings block this completely. Nest is coming to Google Play testing, where you approve it in Family Link like any other app. Email us and we\'ll tell you as soon as it\'s ready.'] ] },
+
+    blocked: { title: 'Nest is blocked or messages arrive late', steps: [
+      ['Screen time limits (iPhone)', 'On your iPhone open your child\'s Screen Time settings, then <span class="say">Always Allowed</span>, and add Nest. Downtime and app limits then won\'t lock Nest. Nest has its own quiet hours and daily limit that you set in Nest, and your child can always message you.'],
+      ['App limits (Family Link)', 'In the Family Link app, open your child, then <span class="say">Controls</span>, then <span class="say">App limits</span>, find Nest and set it to <span class="say">Always allowed</span>.'],
+      ['Messages arrive late (Android)', 'On the phone open Settings, then <span class="say">Apps</span>, then <span class="say">Nest</span>, then <span class="say">Battery</span>, and choose <span class="say">Unrestricted</span>. Samsung: also remove Nest from <span class="say">Sleeping apps</span>.'],
+      ['No notifications', 'Settings, then <span class="say">Notifications</span>, then <span class="say">Nest</span>: switch notifications on.'] ] }
+  };
+
+  var view = document.getElementById('view'), crumbs = document.getElementById('crumbs');
+  var trail = [];
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+
+  function go(key, back) {
+    if (!back) trail.push(key);
+    var s = S[key], h = '';
+    if (s.q) {
+      h = '<h2>' + esc(s.q) + '</h2><div class="choices">' + s.choices.map(function (c) {
+        return '<button type="button" data-go="' + c[0] + '">' + (c[1] ? '<span class="ico" aria-hidden="true">' + c[1] + '</span>' : '') +
+          '<span>' + esc(c[2]) + (c[3] ? '<small>' + esc(c[3]) + '</small>' : '') + '</span></button>';
+      }).join('') + '</div>';
+    } else {
+      h = '<h2>' + esc(s.title) + '</h2><ol class="steps">' + s.steps.map(function (x) { return '<li><b>' + esc(x[0]) + '</b>' + x[1] + '</li>'; }).join('') + '</ol>';
+      if (s.check) {
+        h += '<p class="q">' + esc(s.check) + '</p><div class="row"><button type="button" class="yes" data-done>Yes, it works</button>' +
+          s.next.map(function (n) { return '<button type="button" data-go="' + n[1] + '">' + esc(n[0]) + '</button>'; }).join('') + '</div>';
+      }
+    }
+    view.innerHTML = h;
+    crumbs.innerHTML = trail.length > 1 ? '<button type="button" data-back>← Back</button><button type="button" data-restart>Start again</button>' : '';
+    if (back !== 'init') view.scrollIntoView({ block: 'nearest' });
+    try { history.replaceState(null, '', '#' + key); } catch (e) {}
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('button');
+    if (!t) return;
+    if (t.hasAttribute('data-go')) go(t.getAttribute('data-go'));
+    else if (t.hasAttribute('data-back')) { trail.pop(); go(trail[trail.length - 1], true); }
+    else if (t.hasAttribute('data-restart')) { trail = []; go('start'); }
+    else if (t.hasAttribute('data-done')) {
+      view.insertAdjacentHTML('beforeend', '<p class="ok" style="margin-top:14px">Great. Next: set up your family in Nest. The <a href="../get/#setup">install page</a> has the steps.</p>');
+      t.disabled = true;
+    }
+  });
+
+  var first = (location.hash || '').slice(1);
+  trail = first && S[first] && first !== 'start' ? ['start', first] : [];
+  go(first && S[first] ? first : 'start', 'init');
+  if (!trail.length) trail = ['start'];
+})();
+</script>
+<script src="../count.js" defer></script>
+</body>
+</html>
