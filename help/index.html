@@ -74,17 +74,14 @@ a { color: var(--blue); }
 
     'mine-iphone': { title: 'Your iPhone', steps: [
       ['Get TestFlight', 'Install Apple\'s free TestFlight app from the App Store. <a href="https://apps.apple.com/app/testflight/id899247664">Open TestFlight in the App Store</a>.'],
-      ['Open the Nest invitation', 'Open the email from TestFlight called "Nest" on this iPhone and tap <span class="say">View in TestFlight</span>. No email yet? Reply to your Nest invite with the Apple email on this iPhone (Settings, then the name at the top).'],
+      ['Open the Nest invitation', 'On this iPhone, open <a href="../get/#iphone">the install page</a> and tap <span class="say">Open the Nest invitation</span>. TestFlight opens.'],
       ['Install', 'In TestFlight tap <span class="say">Accept</span>, then <span class="say">Install</span>.'],
       ['Allow notifications', 'Open Nest and tap <span class="say">Allow</span> when it asks.'] ],
-      check: 'Is Nest on your home screen?', next: [['TestFlight says the invitation is invalid or used', 'tf-invalid'], ['I can\'t find the TestFlight email', 'tf-noemail']] },
-    'tf-invalid': { title: 'The invitation is invalid or already used', steps: [
-      ['Check the Apple email', 'An invitation works for the Apple email it was sent to. Open Settings, tap the name at the top and check the email there.'],
-      ['Ask for a new one', 'Reply to your Nest invite with that exact email and we\'ll send a fresh invitation, usually the same day.'] ] },
-    'tf-noemail': { title: 'No TestFlight email', steps: [
-      ['Look in Junk or Spam', 'It comes from TestFlight (no_reply@email.apple.com) with the subject "Nest".'],
-      ['Check which email we have', 'It goes to the Apple email you sent us. Reply to your Nest invite if it was a different one.'],
-      ['Give it a day', 'We send TestFlight invitations by hand, usually within a day of your reply.'] ] },
+      check: 'Is Nest on your home screen?', next: [['TestFlight says the invitation isn\'t available', 'tf-invalid']] },
+    'tf-invalid': { title: 'TestFlight says the invitation isn\'t available', steps: [
+      ['Update TestFlight', 'Open the App Store, search for TestFlight and tap <span class="say">Update</span> if it shows.'],
+      ['Try the link again', 'Open <a href="../get/#iphone">the install page</a> on the iPhone and tap <span class="say">Open the Nest invitation</span> again.'],
+      ['Still not working?', 'Reply to your Nest invite with a screenshot and we\'ll sort it out, usually the same day.'] ] },
 
     'mine-android': { title: 'Your Android phone', steps: [
       ['Download Nest', 'Open <a href="../get/#android">the install page</a> on this phone and tap <span class="say">Download Nest for Android</span>. Use Wi-Fi: it\'s about 100 MB.'],
@@ -99,10 +96,9 @@ a { color: var(--blue); }
       ['Still blocked?', 'Email us a screenshot of the message. Nest will soon be in Google Play testing, which avoids this.'] ] },
 
     'child-iphone': { title: "Your child's iPhone", steps: [
-      ['Send us the right Apple email', 'On your child\'s iPhone open Settings and tap the name at the top. Reply to your Nest invite with that email, so the TestFlight invitation goes to the right Apple account.'],
       ['Allow app installs for a moment', 'On <b>your</b> iPhone open Settings, then <span class="say">Family</span> (or <span class="say">Screen Time</span>), then your child\'s name. Make sure installing apps is allowed. If Ask to Buy is on, keep your phone close: you\'ll get a request to approve TestFlight.'],
       ['Install TestFlight on their iPhone', 'On your child\'s iPhone, get TestFlight from the App Store and approve the request on your phone.'],
-      ['Open the invitation and install', 'Open the TestFlight email on your child\'s iPhone, tap <span class="say">View in TestFlight</span>, then <span class="say">Accept</span> and <span class="say">Install</span>.'],
+      ['Open the invitation and install', 'On your child\'s iPhone, open <a href="../get/#iphone">the install page</a> (or send them the link), tap <span class="say">Open the Nest invitation</span>, then <span class="say">Accept</span> and <span class="say">Install</span>.'],
       ['Link it to your family', 'Open Nest on their iPhone, tap <span class="say">I have a family code</span> and type the 6-digit code from your Nest Settings.'] ],
       check: 'Is Nest working on your child\'s iPhone?', next: [['It says the app is restricted or can\'t be installed', 'iphone-restricted'], ['Nest stops working at bedtime or after a while', 'blocked']] },
     'iphone-restricted': { title: 'The iPhone says it\'s restricted', steps: [
