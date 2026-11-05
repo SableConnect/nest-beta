@@ -52,7 +52,7 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
 </header>
 
 <main>
-  <div class="note" style="margin:0 0 18px;font-size:16px"><strong>This invitation is for your family only.</strong> Nest is in private beta testing, so please don't share this link or these instructions. If you'd like to invite anyone outside your family, including another family, ask us first.</div>
+  <div class="note" style="margin:0 0 18px;font-size:16px"><strong>Sign up in Nest with the email your invite came to.</strong> That's how Nest knows you're invited. Nest is in private beta testing, so please don't post this page publicly. To invite friends' families, use your own invite link: in Nest, open <span class="say">Contacts</span> and tap <span class="say">Share my invite link</span>.</div>
 
   <a href="../help/" style="display:flex;align-items:center;gap:10px;background:var(--surface);border:2px solid var(--blue);border-radius:18px;padding:14px 16px;margin:0 0 18px;color:var(--ink);text-decoration:none;font-weight:700">🛟<span>Stuck, or does your child's phone have Screen Time or Family Link?<br><span style="font-weight:500;color:var(--muted);font-size:15px">Install help walks you through it in 3 minutes</span></span></a>
 
@@ -77,6 +77,16 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
 
   <section id="android">
     <h2>Android</h2>
+    <div id="play-steps" hidden>
+    <p class="lead">Nest is in early access on Google Play.</p>
+    <ol class="steps">
+      <li><strong>Open Nest on Google Play</strong>Tap the button. If Google Play asks, tap <span class="say">Become a tester</span>, then <span class="say">download it on Google Play</span>.<br><a class="btn" id="play-link" href="#">Get Nest on Google Play</a></li>
+      <li><strong>Install</strong>Tap <span class="say">Install</span>. Nest appears with your other apps.</li>
+      <li><strong>Open Nest and allow notifications</strong>Tap <span class="say">Open</span>, then <span class="say">Allow</span> when Nest asks to send notifications.</li>
+    </ol>
+    <p class="note">Updates arrive through Google Play, like any other app.</p>
+    </div>
+    <div id="apk-steps">
     <p class="lead">Nest isn't in the Play Store yet, so you install it straight from our download link. Your phone will ask you to allow this once.</p>
     <ol class="steps">
       <li><strong>Download Nest</strong>Tap the button. If your phone asks, tap <span class="say">Download</span> (the file is about 100 MB, so Wi-Fi is best).<br><a class="btn" id="apk-link" href="https://expo.dev/artifacts/eas/9PVWo3ob9-C-dMe2_8_Bz9ucRsehw4Rf2Nx3dHIhWTE.apk">Download Nest for Android</a></li>
@@ -86,17 +96,19 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
       <li><strong>Open Nest and allow notifications</strong>Tap <span class="say">Open</span>, then <span class="say">Allow</span> when Nest asks to send notifications.</li>
     </ol>
     <p class="note">Updates arrive by themselves: when you close and reopen Nest, it picks up the newest version.</p>
+    </div>
   </section>
 
   <section id="setup">
     <h2>Setting up your family</h2>
     <p class="lead">One parent does this first, on their own phone.</p>
     <ol class="steps">
-      <li><strong>Parent: create your family</strong>Open Nest and tap <span class="say">I'm a parent</span>. Sign up with your email and a password, read the consent box (it includes the family-only beta rule above) and tick <span class="say">I agree</span>, then tap <span class="say">Create family</span>.</li>
+      <li><strong>Parent: create your family</strong>Open Nest and tap <span class="say">I'm a parent</span>. Sign up with the email your invite came to and a password, read the consent box and tick <span class="say">I agree</span>, then tap <span class="say">Create family</span>.</li>
       <li><strong>Add your children</strong>Go to <span class="say">Settings</span>, type your child's first name and age, and tap <span class="say">Add and get a link code</span>. You get a 6-digit code.</li>
       <li><strong>Link your child's phone</strong>Install Nest on your child's phone the same way. Open it, tap <span class="say">I have a family code</span> and type the 6-digit code. Your child reads a short note about what you can see and taps <span class="say">I understand</span>.</li>
       <li><strong>Add the other parent</strong>In <span class="say">Settings</span>, add them as a parent to get a code. They sign up on their phone and tap <span class="say">Join your partner's family</span>.</li>
-      <li><strong>Connect with us</strong>To let our children chat, swap friend codes with us (shown on each child's home screen). Both families' parents say yes before the children can chat. Please ask us before connecting with any other family.</li>
+      <li><strong>Connect with us</strong>To let our children chat, swap friend codes with us (shown on each child's home screen). Both families' parents say yes before the children can chat.</li>
+      <li><strong>Invite friends' families</strong>In <span class="say">Contacts</span>, tap <span class="say">Share my invite link</span>. A family who asks through your link usually gets their invite straight away.</li>
     </ol>
   </section>
 
@@ -117,7 +129,16 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
 // TestFlight public invitation link. Leave empty until Apple approves the beta: the page then asks iPhone users
 // for their Apple email instead.
 var TESTFLIGHT_URL = '';
+// Google Play testing link. Leave empty until Google approves the Play test: Android users then get the download link.
+var PLAY_URL = '';
 (function () {
+  try {
+    if (PLAY_URL) {
+      document.getElementById('play-link').href = PLAY_URL;
+      document.getElementById('play-steps').hidden = false;
+      document.getElementById('apk-steps').hidden = true;
+    }
+  } catch (e) {}
   try {
     if (TESTFLIGHT_URL) {
       document.getElementById('tf-link').href = TESTFLIGHT_URL;

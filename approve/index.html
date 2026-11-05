@@ -42,7 +42,7 @@ button:disabled { opacity: .5; cursor: default; }
       <button class="yes" id="approve" type="button">Approve and send invite</button>
       <button class="no" id="decline" type="button">Decline</button>
     </div>
-    <p class="muted">Approve emails them the install steps and the family-only rule. Decline sends nothing.</p>
+    <p class="muted">Approve emails them the install steps. Decline sends nothing.</p>
   </div>
   <p class="note" id="msg" hidden role="status"></p>
 </main>
@@ -68,25 +68,34 @@ button:disabled { opacity: .5; cursor: default; }
     facts.appendChild(dt); facts.appendChild(dd);
   }
   var STATUS = { invited: 'Already invited', joined: 'Already in Nest', declined: 'Declined (you can still approve)' };
+  var approveBtn = document.getElementById('approve'), declineBtn = document.getElementById('decline');
   if (!id || !t) { lead.textContent = 'This page opens from the link in your invite-request email.'; return; }
   call('peek').then(function (s) {
     lead.textContent = s.first_name + ' asked for an invite' + (STATUS[s.status] ? ' · ' + STATUS[s.status] : '') + '.';
     add('Name', s.first_name); add('Email', s.email); add('Mobile', s.mobile); add('Phone', s.phone_type);
+    if (s.invited_by) add('Invited by', s.invited_by + (s.auto_approved ? ' (approved automatically)' : ''));
     add("Children's ages", s.child_ages); add('Town', s.town); add('Heard about Nest', s.heard_from); add('Link tag', s.source);
     add('Asked', new Date(s.created_at).toLocaleString('en-ZA', { dateStyle: 'medium', timeStyle: 'short' }));
     who.hidden = false;
-    if (s.status === 'invited' || s.status === 'joined') document.getElementById('buttons').hidden = true;
+    if (s.status === 'joined') document.getElementById('buttons').hidden = true;
+    if (s.status === 'invited') {
+      // Not set up yet: the invite can still be cancelled.
+      approveBtn.hidden = true; declineBtn.textContent = 'Cancel their invite';
+      document.querySelector('#who .muted').textContent = 'Cancelling stops them setting up a family in Nest. Nothing is sent to them.';
+    }
   }).catch(function (e) { lead.textContent = e.message; });
   function decide(d, btn) {
-    document.getElementById('approve').disabled = true; document.getElementById('decline').disabled = true;
+    var label = btn.textContent;
+    approveBtn.disabled = true; declineBtn.disabled = true;
     btn.textContent = d === 'approve' ? 'Sending…' : 'Saving…';
     call('decide', { decision: d }).then(function (r) {
       document.getElementById('buttons').hidden = true;
       say(r.status === 'invited' ? 'Invite sent. They have the install steps in their email.' :
-          r.status === 'joined' ? 'They are already in Nest.' : 'Declined. Nothing was sent to them.', true);
+          r.status === 'joined' ? 'They have already set up their family in Nest, so the invite can\'t be cancelled.' :
+          'Done. Nothing was sent to them, and they can\'t set up a family in Nest.', true);
     }).catch(function (e) {
-      document.getElementById('approve').disabled = false; document.getElementById('decline').disabled = false;
-      btn.textContent = d === 'approve' ? 'Approve and send invite' : 'Decline';
+      approveBtn.disabled = false; declineBtn.disabled = false;
+      btn.textContent = label;
       say(e.message, false);
     });
   }
