@@ -42,11 +42,11 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
 <header><div class="wrap">
   <a href="../"><svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 27 L32 9 L56 27" stroke="#3647C4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 30 h30 a5 5 0 0 1 5 5 v13 a5 5 0 0 1 -5 5 h-15 l-8 6 v-6 h-7 a5 5 0 0 1 -5 -5 v-13 a5 5 0 0 1 5 -5 z" fill="#3647C4"/></svg>Nest</a>
   <h1>Privacy notice for the Nest beta</h1>
-  <p>Version 4 November 2026 (updated: website visits and invite emails)</p>
+  <p>Last updated 5 November 2026. New: parents' mobile numbers, the contact check, chats brought over from WhatsApp, account identifiers, sharing with authorities, Google Play, and how to delete an account.</p>
 </div></header>
 
 <main>
-  <p class="note">Nest is in private beta testing with invited families. This notice explains how we handle personal information during the beta. Our full privacy policy is being finalised with our legal adviser and will replace this notice before Nest is in the app stores. We'll tell you in the app before any important change.</p>
+  <p class="note">Nest is in private beta testing with invited families. This notice explains how we handle personal information during the beta. Our full privacy policy is being finalised with our legal adviser and will replace this notice before Nest is publicly available in the app stores. We'll tell you in the app before any important change.</p>
 
   <section>
     <h2>Who we are</h2>
@@ -59,18 +59,28 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
     <div class="table"><table>
       <tr><th>Information</th><th>Why</th></tr>
       <tr><td>A parent's email address and password (stored scrambled; we can't read it), name, and what the children call them</td><td>To sign in, recover the account and show who is talking</td></tr>
+      <tr><td>A parent's mobile number, if they add it. We don't yet check that the number is theirs. They can remove it, or stop others finding them by it, at any time</td><td>So that other parents who have the number can find them on Nest and ask to connect. A parent who finds you sees your name and your family's name on Nest</td></tr>
+      <tr><td>Contact check, only if a parent chooses it: the phone scrambles each contact's number (a "hash") and sends the hashes to Nest, which compares them with the numbers parents have added. A hash isn't anonymous, because a number can be worked out from it, so we treat hashes as personal information. Names stay on the phone unless the parent chooses to save a contact under that name when they connect. Nest uses the hashes only for the check and doesn't store them. It keeps only how many numbers were checked, for 24 hours, to stop misuse</td><td>To show a parent which of their contacts are already on Nest</td></tr>
       <tr><td>A child's first name and birth year</td><td>To show who is talking and set monitoring to suit their age</td></tr>
+      <tr><td>Family members a parent adds, such as grandparents: their name and what the family calls them. They join with a code, without an email or password</td><td>To show who is talking in family chats</td></tr>
+      <tr><td>Connections between parents from different families: who asked whom, and the answer</td><td>So that connected parents can chat and call</td></tr>
+      <tr><td>A friend's first name, when a child asks a parent to invite that friend</td><td>So the parent can approve or decline</td></tr>
+      <tr><td>Account identifiers: Nest's internal number for each person and family, one-time codes that link a phone, children's friend codes, and each parent's invite code (and which invite brought a beta sign-up)</td><td>To run accounts, link phones, let children's friends connect with their parents' approval, and show a parent how many families joined from their invites</td></tr>
       <tr><td>Profile photos and a family cover photo, if added</td><td>To show who is who</td></tr>
       <tr><td>Messages, replies, reactions, voice notes and photos, and when each was sent, delivered and read</td><td>To deliver conversations and show ticks</td></tr>
+      <tr><td>Chats an adult brings over from WhatsApp: the text of the messages, who sent each one and when. Photos and other files aren't brought over</td><td>To keep a family's chat history in one place. Everyone in the Nest chat can read it, and so can the parents of any child in it</td></tr>
       <tr><td>Calls: who called whom, when, for how long, voice or video. Calls are never recorded</td><td>To connect calls, count call time and show parents their children's calls</td></tr>
       <tr><td>Safety flags, daily minutes of use, quiet hours and limits, friend and group approvals</td><td>To run the parental controls each parent chooses</td></tr>
-      <tr><td>Reports and blocks, and for reports to Nest, a copy of the reported message and a few earlier ones</td><td>To alert parents, stop unwanted contact and let our safety team act</td></tr>
+      <tr><td>Reports and blocks, and for reports to Nest, a copy of the reported message and up to 5 earlier ones (or the chat's last 20 messages, if no single message is reported)</td><td>To alert parents, stop unwanted contact and let our safety team act</td></tr>
       <tr><td>A notification token for each phone</td><td>To deliver alerts</td></tr>
+      <tr><td>Technical records our providers keep when the app connects: internet address, device and app type, sign-in times</td><td>To keep accounts secure and stop misuse</td></tr>
       <tr><td>Beta sign-ups: first name, email, optional mobile number and town, phone type, children's ages (no names), how you heard of Nest, and whether you want Nest news</td><td>To invite you to the beta, and to send Nest news only if you ticked that box</td></tr>
       <tr><td>Visits to this website: the page, the day, and where the link came from (for example WhatsApp). No cookies, and we don't store your internet address</td><td>To see how many people the beta reaches</td></tr>
     </table></div>
+    <p>A chat brought over from WhatsApp holds other people's names and messages too, and everyone in the Nest chat can read it, who may not be the same people as in WhatsApp. Only bring over a chat if the people in it would expect it, such as your own family's chat, and never one that children shouldn't see. The person who brought it over can delete it at any time. If you're in a chat someone brought over and want it removed, email <a href="mailto:privacy@sableconnect.app">privacy@sableconnect.app</a> and we'll remove your messages or the chat.</p>
+    <p>Everyone in Nest agrees to the <a href="../rules/">Nest rules</a>, which say what isn't allowed and how to report it.</p>
     <p>We don't collect your location or advertising identifiers, we don't use advertising or third-party analytics, and we never sell information.</p>
-    <p>Messages can contain sensitive information, such as about health or religion. We don't ask for it or analyse it, apart from the automatic safety check, and we process it only with the parent's consent.</p>
+    <p>Messages can contain sensitive information, such as about health, religion or a crime. We don't ask for it. The automatic safety check looks only for words that may mean a child is at risk, and our safety team reads only messages reported to it. We process this information with the parent's consent, or where the law allows it, such as to protect a child.</p>
   </section>
 
   <section>
@@ -81,7 +91,8 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
       <li><strong>Safety view</strong> (suggested 13 to 15): parents see who the child chats with and when, and the text of messages flagged for safety.</li>
       <li><strong>Activity only</strong> (suggested 16 and 17): parents see who the child chats with and when, but not what they say.</li>
     </ul>
-    <p>At every level, parents can see photos, hear voice notes and see call times in their children's chats. A friend from another family can chat with a child only after both families' parents approve. A child can also talk to Nest's safety team privately, without their parents being told, so that they always have somewhere to turn.</p>
+    <p>At every level, parents can see photos, hear voice notes and see call times in their children's chats. A friend from another family can chat with a child only after both families' parents approve. A child can also talk to Nest's safety team privately, without their parents being told, so that they always have somewhere to turn. We don't tell their parents unless the law requires it.</p>
+    <p>When a child chats with a friend from another family, the friend's parents can also see the chat according to their own settings. Family members such as grandparents can chat with everyone in the family, and parents can read those chats. Parents from different families can chat only if both agree to connect.</p>
   </section>
 
   <section>
@@ -90,17 +101,20 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
       <tr><th>Service</th><th>What it does</th><th>Where</th></tr>
       <tr><td>Supabase</td><td>Stores accounts, messages, photos, voice notes, call records and beta sign-ups</td><td>Amazon Web Services, Paris, France</td></tr>
       <tr><td>Expo, Apple and Google</td><td>Deliver notifications. They carry no names and no message text</td><td>United States and elsewhere</td></tr>
-      <tr><td>LiveKit</td><td>Connects voice and video calls. Sound and picture pass through during a call; nothing is recorded</td><td>Outside South Africa</td></tr>
-      <tr><td>Resend</td><td>Sends our emails: replies and invites to people who ask for one, and alerts to our team (safety alerts carry no names or messages)</td><td>Ireland</td></tr>
+      <tr><td>Expo</td><td>Delivers app updates. It sees the phone's internet address and an install code</td><td>United States</td></tr>
+      <tr><td>LiveKit</td><td>Connects voice and video calls. Sound, picture and the names shown in the call pass through; nothing is recorded. It keeps technical records of each call's connection and quality</td><td>Servers near the callers, which may be outside South Africa (LiveKit is a US company)</td></tr>
+      <tr><td>Resend</td><td>Sends our emails: replies and invites to people who ask for one, and alerts to our team (safety alerts carry no names or messages), and receives email sent to privacy@sableconnect.app</td><td>Ireland</td></tr>
       <tr><td>GitHub</td><td>Hosts this website. It sees visitors' internet addresses; anything you type into a form goes straight to Supabase</td><td>United States</td></tr>
       <tr><td>Apple TestFlight</td><td>Delivers the iPhone test version, under Apple's own terms</td><td>United States</td></tr>
+      <tr><td>Google Play</td><td>Delivers the Android version, under Google's own terms</td><td>United States and elsewhere</td></tr>
     </table></div>
-    <p>Some of these services are outside South Africa. We send information to them with your consent (POPIA section 72) and only so that they can provide their service to us. Information stored in France is also protected by European Union data protection law.</p>
+    <p>Some of these services are outside South Africa. Apart from Apple and Google, which deliver the app under their own terms, they may use the information only to provide their service to us, under agreements that require them to keep it confidential and secure. We send information to them because it's needed to provide Nest to you, and, for the app, with the consent a parent gives when setting up a family (POPIA section 72). Our providers in France and Ireland must also follow European Union data protection law.</p>
+    <p>We share information with the police, a social worker or another authority only when the law requires it, or to protect a child from serious harm, for example after a report to Nest.</p>
   </section>
 
   <section>
     <h2>Security</h2>
-    <p>Information is encrypted while it travels between the app and our servers and while it's stored. The database itself enforces who can read what, and our technical staff's direct reads of messages are logged.</p>
+    <p>Information is encrypted while it travels between the app and our servers and while it's stored. The database itself enforces who can read what, and when our technical staff look up messages directly in the database, it's logged.</p>
     <p><strong>Beta notice:</strong> messages are not yet end-to-end encrypted, so they're stored on our servers in a form our systems can read.</p>
     <p>If someone gains access to personal information without permission, we'll tell the Information Regulator and the people affected as soon as reasonably possible (POPIA section 22).</p>
   </section>
@@ -108,16 +122,20 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16
   <section>
     <h2>How long we keep it</h2>
     <ul>
-      <li>We keep information while the family account is active. A parent can delete the account in the app at any time; if they're the only parent, the whole family is deleted straight away.</li>
+      <li>We keep information while the family account is active. A parent can delete the account in the app at any time (Settings, then Delete account); if no other parent in the family has joined Nest, the whole family is deleted straight away. <a href="../delete/">How to delete a Nest account</a>.</li>
       <li>Deleted messages are removed straight away, and deleted photo and voice files the same night, unless they're held for a report to Nest.</li>
       <li>Reports to Nest are kept for 12 months after they're closed, or until any referral to the authorities ends.</li>
-      <li>Beta sign-ups are kept until you join Nest or ask us to remove them, and deleted 12 months after the beta ends.</li>
+      <li>Beta sign-ups are kept until 12 months after the beta ends, unless you ask us to remove them sooner.</li>
+      <li>Chats brought over from WhatsApp are kept until the person who brought them over deletes them or leaves Nest, or the Nest chat is deleted.</li>
+      <li>Records of our safety team's work (who opened which report, and actions taken) are kept for 24 months.</li>
+      <li>Copies in our providers' backups are deleted automatically, normally within 30 days. Sign-in records (email address, internet address and time) may be kept longer, for security.</li>
     </ul>
   </section>
 
   <section>
     <h2>Your rights</h2>
     <p>You can see the main details Nest holds about you on the <strong>My profile</strong> screen in the app. You can ask us at any time to show you what we hold about you or your children, correct it, delete it, or stop processing it, and you can withdraw your consent. A parent can also do this in the app by removing a child or deleting the account. Email <a href="mailto:privacy@sableconnect.app">privacy@sableconnect.app</a>; we'll respond within 30 days.</p>
+    <p>We send Nest news only to people who ticked the box when signing up. To stop it at any time, email <a href="mailto:privacy@sableconnect.app">privacy@sableconnect.app</a> and we'll stop straight away.</p>
     <p>Giving us information is voluntary, but Nest can't work without a parent's email, the children's first names and birth years, and the messages themselves.</p>
     <p>If you're not happy with our answer, you can complain to the Information Regulator: <a href="mailto:POPIAComplaints@inforegulator.org.za">POPIAComplaints@inforegulator.org.za</a>, 010 023 5200, Woodmead North Office Park, 54 Maxwell Drive, Woodmead, Johannesburg, 2191 (<a href="https://inforegulator.org.za/">inforegulator.org.za</a>).</p>
   </section>
